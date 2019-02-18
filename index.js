@@ -9,7 +9,7 @@ let messageevent = message.content.split(" ");
 let event = messageevent[0];
 let eventargs = messageevent.slice(1); 
     
-  if (event === prefix + "miroir") {
+  if (event === prefix + "event") {
     var reponse = ["**Event 1 test**","**Event 2 test**","**Event 3 test**","**Event 4 test**"]
     var resultat = Math.floor((Math.random() * reponse.length));
     const eembed =new RichEmbed()
