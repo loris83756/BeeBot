@@ -15,7 +15,7 @@ let eventargs = messageevent.slice(1);
     var reponse = ["**Event 1 test**","**Event 2 test**","**Event 3 test**","**Event 4 test**"]
     var resultat = Math.floor((Math.random() * reponse.length));
      let banRaison = eventargs.join(" ").slice(22);
-    if(!message.member.hasPermission("MANAGE_ROLE")) 
+    if(!message.member.hasPermission("MANAGE_ROLES")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**"); 
     const eembed =new RichEmbed()
     .setTitle("**__Event__**")
