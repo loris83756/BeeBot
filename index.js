@@ -60,7 +60,7 @@ let eventargs = messageevent.slice(1);
     .addField("$autreevent","Permet de faire une autre event qui n'est pas dans le $autreevent")
     .addField("$ping","Permet de savoir la latence du bot en ms")
     .addField("$infobot","Donne des info sur le bot")
-    .addField("$infouser
+    .addField("$infouser","Donne des information sur l'utilisateur mentionner")
     .setColor(Math.floor(Math.random() * 16777214) + 1)
     message.channel.send(hembed)
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
