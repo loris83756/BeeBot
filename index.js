@@ -4,6 +4,7 @@ const { Client, RichEmbed } = require('discord.js');
 
 var prefix = ("-")
 
+bot.on('message', message => {
 let messageevent = message.content.split(" ");
 let event = messageevent[0];
 let eventargs = messageevent.slice(1); 
