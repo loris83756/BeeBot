@@ -31,16 +31,16 @@ let eventargs = messageevent.slice(1);
     let aevent = messageaevent[0];
     let aeventargs = messageaevent.slice(1);  
       
-     if (event === prefix + "autreevent") {
+     if (aevent === prefix + "autreevent") {
      let aeventr = aeventargs.join(" ").slice(0);
     if(aeventr)
     return message.channel.send("**Vous devez écrire l'envent a créé**")
     if(!message.member.hasPermission("MANAGE_ROLES")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**"); 
-    const eembed =new RichEmbed()
+    const aeembed =new RichEmbed()
     .addField("**:tada: __Event__**",`${aeventr}`)
     .setColor(Math.floor(Math.random() * 16777214) + 1)
-    message.channel.send(eembed)
+    message.channel.send(aeembed)
     console.log(`Commade aevent effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
      }
    
