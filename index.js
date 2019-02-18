@@ -32,7 +32,7 @@ let eventargs = messageevent.slice(1);
     let aeventargs = messageaevent.slice(1);  
       
      if (event === prefix + "autreevent") {
-     let aeventr = aeventargs.join(" ").slice(22);
+     let aeventr = aeventargs.join(" ").slice(0);
     if(aeventr)
     return message.channel.send("**Vous devez écrire l'envent a créé**")
     if(!message.member.hasPermission("MANAGE_ROLES")) 
