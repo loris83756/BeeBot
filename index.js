@@ -75,6 +75,14 @@ let eventargs = messageevent.slice(1);
     message.channel.send(hembed)
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
   }   
+  
+       if (message.content === "@loris83756#6865") {
+    const hembed =new RichEmbed()
+    .setTitle("**:x: LORIS AIME PAS LES MENTION MENTIONEZ @ewenPOLO#8070 :x: !!!!!!**")
+    message.channel.send(hembed)
+    console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
+  }   
           
+      
 });
 bot.login(process.env.TOKEN);
