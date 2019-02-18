@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js');
 
-var prefix = ("-")
+var prefix = (""")
 
 
       
@@ -52,7 +52,6 @@ return message.send("**Vous devez écrire une event a créé")
     const pembed = new RichEmbed()
                 .setTitle(`:ping_pong: Pong: ${bot.ping} ms`)
                 .setColor(Math.floor(Math.random() * 16777214) + 1)
-                .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
                 .setTimestamp()
      message.channel.send(pembed);
      console.log(`Commade ping effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
