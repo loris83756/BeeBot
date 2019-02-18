@@ -18,7 +18,7 @@ let event = messageevent[0];
 let eventargs = messageevent.slice(1); 
     
   if (event === prefix + "event") {
-    var reponse = ["**Event 1 test**","**Event 2 test**","**Event 3 test**","**Event 4 test**"]
+    var reponse = ["Event sur **Master of the grid**: \n http://masterofthegrid.sparklinlabs.com/play/twitch/ewenasse","Event **Minecraft** \n __Serveur:__ Multi0Game.aternos.me \n __Version:__ 1.8","**Event Roblox**"]
     var resultat = Math.floor((Math.random() * reponse.length));
      let banRaison = eventargs.join(" ").slice(22);
     if(!message.member.hasPermission("MANAGE_ROLES")) 
@@ -34,13 +34,13 @@ let eventargs = messageevent.slice(1);
 let messageaevent = message.content.split(" ");
 let aevent = messageaevent[0];
 let aeventargs = messageaevent.slice(1); 
-    
+if (!aeventargs)
+return message.send("**Vous devez écrire une event a créé")   
+      
  if (event === prefix + "autreevent") {     
  let aeventmessage = aeventargs.join(" ").slice(0);
    if(!message.member.hasPermission("MANAGE_ROLES")) 
-    return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");     
-   if (!aeventargs)
-    return message.send("**Vous devez écrire une event a créé")  
+    return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");       
    const aeembed =new RichEmbed()
     .addField("**:tada: Event**",aeventmessage)
     .setColor(Math.floor(Math.random() * 16777214) + 1)
