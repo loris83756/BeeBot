@@ -4,7 +4,7 @@ const { Client, RichEmbed } = require('discord.js');
 
 var prefix = ("-")
 
-bot.on('message', message => {
+
       
       
 bot.on('ready',function() {
@@ -12,7 +12,7 @@ bot.user.setActivity(`Prefix: -| ${bot.users.size} users | ${bot.guilds.size} se
     console.log("Connecter");
 })
       
-      
+bot.on('message', message => {      
 let messageevent = message.content.split(" ");
 let event = messageevent[0];
 let eventargs = messageevent.slice(1); 
@@ -48,5 +48,15 @@ return message.send("**Vous devez écrire une event a créé")
     console.log(`Commade aevent effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
  }
 
+ if (message.content === prefix + "ping") {
+    const pembed = new RichEmbed()
+                .setTitle(`:ping_pong: Pong: ${bot.ping} ms`)
+                .setColor(Math.floor(Math.random() * 16777214) + 1)
+                .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
+                .setTimestamp()
+     message.channel.send(pembed);
+     console.log(`Commade ping effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
+    }     
+      
 });
 bot.login(process.env.TOKEN);
