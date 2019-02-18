@@ -59,13 +59,14 @@ let eventargs = messageevent.slice(1);
     .addField("$event","Permet de tirer un event au hasard")
     .addField("$autreevent","Permet de faire une autre event qui n'est pas dans le $autreevent")
     .addField("$ping","Permet de savoir la latence du bot en ms")
-    .addField("$info","Donne des info sur le bot")
+    .addField("$infobot","Donne des info sur le bot")
+    .addField("$infouser
     .setColor(Math.floor(Math.random() * 16777214) + 1)
     message.channel.send(hembed)
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
   }   
       
-       if (message.content === prefix + "info") {
+       if (message.content === prefix + "infobot") {
     const hembed =new RichEmbed()
     .setTitle("**:regional_indicator_i: INFO**")
     .addField("Développer par:","loris83756#6865")
@@ -82,7 +83,26 @@ let eventargs = messageevent.slice(1);
     message.channel.send(hembed)
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
   }   
-          
+      
+  var messageuser = message.content.split(" ");
+  var infouser = messageuser[0];
+  var userargs = messageuser.slice(1); 
+    
+   if (infouser === prefix + "infouser") {
+     var user = message.guild.member(message.mentions.users.first() || message.guild.members.get(userargs[0]));
+    if (!user) 
+    return message.channel.send("**:information_source: Vous devez mentionné un utilisateur.**"); 
+        const iuembed = new RichEmbed()
+        .setTitle(`**__:information_source: Info User__**`) 
+        .addField("**:door: Tu as rejoin le:**", message.member.joinedAt)
+        .addField("**:bookmark_tabs: Roles que tu posséde sur ce serveur:**",message.member.roles.map(roles =>`${roles.name}`).join(', '))
+        .setColor((Math.floor(Math.random() * 16777214) + 1))
+        .setThumbnail(message.mentions.users.first().avatarURL)
+        .setTimestamp()
+
+        message.channel.send(iuembed);
+        console.log(`Commade info user effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
+    } 
       
 });
 bot.login(process.env.TOKEN);
