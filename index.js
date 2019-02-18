@@ -55,7 +55,7 @@ let eventargs = messageevent.slice(1);
       
    if (message.content === prefix + "help") {
     const hembed =new RichEmbed()
-    .setTitle("** :regional_indicator_i: HELP**")
+    .setTitle("** :regional_indicator_h: HELP**")
     .addField("$event","Permet de tirer un event au hasard")
     .addField("$autreevent","Permet de faire une autre event qui n'est pas dans le $autreevent")
     .addField("$ping","Permet de savoir la latence du bot en ms")
