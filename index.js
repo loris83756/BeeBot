@@ -10,6 +10,7 @@ bot.on('message', message => {
 bot.on('ready',function() {
 bot.user.setActivity(`Prefix: -| ${bot.users.size} users | ${bot.guilds.size} serveurs |`, { type: `STREAMING`, url: 'https://www.twitch.tv/loris83756'})
     console.log("Connecter");
+})
       
       
 let messageevent = message.content.split(" ");
