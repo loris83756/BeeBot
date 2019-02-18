@@ -76,5 +76,13 @@ let eventargs = messageevent.slice(1);
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
   }   
       
+    if (message.content ===  + "!staff") {
+    const hembed =new RichEmbed()
+    .setTitle("**Je suis désolé pour toi débrouille toi xDD**")
+    .setColor(Math.floor(Math.random() * 16777214) + 1)
+    message.channel.send(hembed)
+    console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
+  }      
+      
 });
 bot.login(process.env.TOKEN);
