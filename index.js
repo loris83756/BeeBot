@@ -4,5 +4,5 @@ const { Client, RichEmbed } = require('discord.js');
 
 var prefix = ("*")
 
-});
+);
 bot.login(process.env.TOKEN);
