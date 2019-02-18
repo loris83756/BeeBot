@@ -55,7 +55,7 @@ let eventargs = messageevent.slice(1);
       
    if (message.content === prefix + "help") {
     const hembed =new RichEmbed()
-    .setTitle("**HELP**")
+    .setTitle("** :regional_indicator_i: HELP**")
     .addField("$event","Permet de tirer un event au hasard")
     .addField("$autreevent","Permet de faire une autre event qui n'est pas dans le $autreevent")
     .addField("$ping","Permet de savoir la latence du bot en ms")
@@ -67,7 +67,7 @@ let eventargs = messageevent.slice(1);
       
        if (message.content === prefix + "info") {
     const hembed =new RichEmbed()
-    .setTitle("**INFO**")
+    .setTitle("**:regional_indicator_i: INFO**")
     .addField("Développer par:","loris83756#6865")
     .addField("Hébergeur:","Heroku")
     .addField("MultiGame event#2430 est une filial de la Beeing Corporation.","**.....................................................................**")
