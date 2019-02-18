@@ -3,8 +3,6 @@ const bot = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js');
 
 var prefix = ("$")
-
-
       
       
 bot.on('ready',function() {
@@ -54,6 +52,29 @@ let eventargs = messageevent.slice(1);
      message.channel.send(pembed);
      console.log(`Commade ping effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
     }     
+      
+   if (message.content === prefix + "help") {
+    const hembed =new RichEmbed()
+    .setTitle("**HELP**")
+    .addField("$event","Permet de tirer un event au hasard")
+    .addField("$autreevent","Permet de faire une autre event qui n'est pas dans le $autreevent")
+    .addField("$ping","Permet de savoir la latence du bot en ms")
+    .addField("$info","Donne des info sur le bot")
+    .setColor(Math.floor(Math.random() * 16777214) + 1)
+    message.channel.send(hembed)
+    console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
+  }   
+      
+       if (message.content === prefix + "info") {
+    const hembed =new RichEmbed()
+    .setTitle("**INFO**")
+    .addField("Développer par:","loris#6865")
+    .addField("Hébergeur:","Heroku")
+    .addField("MultiGame event#2430 est une filial de la Beeing Corporation.","..........................")
+    .setColor(Math.floor(Math.random() * 16777214) + 1)
+    message.channel.send(hembed)
+    console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
+  }   
       
 });
 bot.login(process.env.TOKEN);
