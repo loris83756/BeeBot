@@ -30,18 +30,18 @@ let eventargs = messageevent.slice(1);
     message.channel.send(eembed)
     console.log(`Commade event effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
   }
-   
+  
+      
+ if (event === prefix + "autreevent") {      
 let messageaevent = message.content.split(" ");
 let aevent = messageaevent[0];
 let aeventargs = messageaevent.slice(1); 
 if (!aeventargs)
-return message.send("**Vous devez écrire une event a créé")   
-      
- if (event === prefix + "autreevent") {     
+return message.send("**Vous devez écrire une event a créé")        
  let aeventmessage = aeventargs.join(" ").slice(0);
    if(!message.member.hasPermission("MANAGE_ROLES")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");       
-   const aeembed =new RichEmbed()
+    const aeembed =new RichEmbed()
     .addField("**:tada: Event**",aeventmessage)
     .setColor(Math.floor(Math.random() * 16777214) + 1)
     message.channel.send(aeembed)
