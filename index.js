@@ -35,7 +35,8 @@ let aeventargs = messageaevent.slice(1);
     .addField("**Event**",aeventmessage)
     .setColor(Math.floor(Math.random() * 16777214) + 1)
     message.channel.send(aeembed)
-    console.log(`Commade aevent effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)      
+    console.log(`Commade aevent effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
+ }
 
 });
 bot.login(process.env.TOKEN);
