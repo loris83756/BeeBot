@@ -19,5 +19,5 @@ let eventargs = messageevent.slice(1);
     console.log(`Commade event effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
   }
 
-});
+
 bot.login(process.env.TOKEN);
