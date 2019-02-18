@@ -94,7 +94,7 @@ let eventargs = messageevent.slice(1);
     return message.channel.send("**:information_source: Vous devez mentionné un utilisateur.**"); 
         const iuembed = new RichEmbed()
         .setTitle(`**__:information_source: Info User__**`) 
-        .addField(`**:door: ${user} rejoin le:**`, message.member.joinedAt)
+        .addField(`**:door: Rejoin le:**`, message.member.joinedAt)
         .addField("**:bookmark_tabs: Roles que tu posséde sur ce serveur:**",message.member.roles.map(roles =>`${roles.name}`).join(', '))
         .setColor((Math.floor(Math.random() * 16777214) + 1))
         .setThumbnail(message.mentions.users.first().avatarURL)
