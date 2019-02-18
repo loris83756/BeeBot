@@ -8,7 +8,7 @@ var prefix = ("$")
       
       
 bot.on('ready',function() {
-bot.user.setActivity(`Prefix: -| ${bot.users.size} users | ${bot.guilds.size} serveurs |`, { type: `STREAMING`, url: 'https://www.twitch.tv/loris83756'})
+bot.user.setActivity(`Prefix: $ | ${bot.users.size} users | ${bot.guilds.size} serveurs |`, { type: `STREAMING`, url: 'https://www.twitch.tv/ewenasse'})
     console.log("Connecter");
 })
       
