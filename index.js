@@ -70,7 +70,7 @@ let eventargs = messageevent.slice(1);
     .setTitle("**INFO**")
     .addField("Développer par:","loris83756#6865")
     .addField("Hébergeur:","Heroku")
-    .addField("MultiGame event#2430 est une filial de la Beeing Corporation.","......................................................")
+    .addField("MultiGame event#2430 est une filial de la Beeing Corporation.","**.....................................................................**")
     .setColor(Math.floor(Math.random() * 16777214) + 1)
     message.channel.send(hembed)
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
