@@ -24,6 +24,18 @@ let eventargs = messageevent.slice(1);
     message.channel.send(eembed)
     console.log(`Commade event effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
   }
+   
+let messageaevent = message.content.split(" ");
+let aevent = messageaevent[0];
+let aeventargs = messageaevent.slice(1); 
+    
+ if (event === prefix + "autreevent") {     
+ let aeventmessage = desargs.join(" ").slice(0);
+   const aeembed =new RichEmbed()
+    .addField("**Event**",aeventmessage)
+    .setColor(Math.floor(Math.random() * 16777214) + 1)
+    message.channel.send(aeembed)
+    console.log(`Commade aevent effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)      
 
 });
 bot.login(process.env.TOKEN);
