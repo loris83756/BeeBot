@@ -30,7 +30,7 @@ let aevent = messageaevent[0];
 let aeventargs = messageaevent.slice(1); 
     
  if (event === prefix + "autreevent") {     
- let aeventmessage = desargs.join(" ").slice(0);
+ let aeventmessage = aeventargs.join(" ").slice(0);
    const aeembed =new RichEmbed()
     .addField("**Event**",aeventmessage)
     .setColor(Math.floor(Math.random() * 16777214) + 1)
