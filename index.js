@@ -252,9 +252,9 @@ message.channel.send(embed);
 console.log(`Commade kick effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)   
 }
 //CLEAR----------------------------------------------------------------------------------------------------------------------------
-var messageclear = message.content.split(" ");
-var clear = messageclear[0];
-var clearargs = messageclear.slice(1); 
+let messageclear = message.content.split(" ");
+let clear = messageclear[0];
+let clearargs = messageclear.slice(1); 
   
 if (clear === prefix + "clear") {
     if (!clearargs[0]) 
