@@ -189,9 +189,10 @@ var miroirargs = messagemiroir.slice(0);
   if (miroir === prefix + "miroir") {
     var reponse = ["**Oui**","**Non**","**Peut-etre**","**Je ne sais pas**"]
     var resultat = Math.floor((Math.random() * reponse.length));
+    let miroirq = miroirargs.join(" ").slice(22);    
     const membed =new RichEmbed()
     .setTitle("**__:crystal_ball: Miroir Magique__**")
-    .addField("Question", `${miroirargs}`)
+    .addField("Question", `${miroirq}`)
     .addField("Réponse:",reponse[resultat])
     .setColor(0xffa500)
     .setThumbnail("http://ekladata.com/JftiL-mR0hOfxXe8OFrYHdu9vPk.gif")
