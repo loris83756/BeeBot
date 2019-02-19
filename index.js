@@ -182,20 +182,20 @@ console.log(`Commade info serveur effectué par: ${message.author} sur ${message
     console.log(`Commade pile/face effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
 } 
 //MIROIR---------------------------------------------------------------------------------------------------------------------------    
-let messagemiroir = message.content.split(" ");
-let miroir = messagemiroir[0];
-let miroirargs = messagemiroir.slice(1); 
+var messagemiroir = message.content.split(" ");
+var miroir = messagemiroir[0];
+var miroirargs = messagemiroir.slice(0); 
     
   if (miroir === prefix + "miroir") {
     var reponse = ["**Oui**","**Non**","**Peut-etre**","**Je ne sais pas**"]
     var resultat = Math.floor((Math.random() * reponse.length));
-    const embed =new RichEmbed()
+    const membed =new RichEmbed()
     .setTitle("**__:crystal_ball: Miroir Magique__**")
     .addField("Question", `${miroirargs}`)
     .addField("Réponse:",reponse[resultat])
     .setColor(0xffa500)
     .setThumbnail("http://ekladata.com/JftiL-mR0hOfxXe8OFrYHdu9vPk.gif")
-    message.channel.send(embed)
+    message.channel.send(membed)
     console.log(`Commade miroir effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
   }
 //BAN----------------------------------------------------------------------------------------------------------------------     
@@ -251,9 +251,9 @@ message.channel.send(embed);
 console.log(`Commade kick effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)   
 }
 //CLEAR----------------------------------------------------------------------------------------------------------------------------
-let messageclear = message.content.split(" ");
-let clear = messageclear[0];
-let clearargs = messageclear.slice(1); 
+var messageclear = message.content.split(" ");
+var clear = messageclear[0];
+var clearargs = messageclear.slice(1); 
   
 if (clear === prefix + "clear") {
     if (!clearargs[0]) 
