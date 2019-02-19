@@ -184,12 +184,12 @@ console.log(`Commade info serveur effectué par: ${message.author} sur ${message
 //MIROIR---------------------------------------------------------------------------------------------------------------------------    
 var messagemiroir = message.content.split(" ");
 var miroir = messagemiroir[0];
-var miroirargs = messagemiroir.slice(0); 
+var miroirargs = messagemiroir.slice(1); 
     
   if (miroir === prefix + "miroir") {
     var reponse = ["**Oui**","**Non**","**Peut-etre**","**Je ne sais pas**"]
     var resultat = Math.floor((Math.random() * reponse.length));
-    let miroirq = miroirargs.join(" ").slice(22);    
+    let miroirq = miroirargs.join(" ").slice(0);    
     const membed =new RichEmbed()
     .setTitle("**__:crystal_ball: Miroir Magique__**")
     .addField("Question", `${miroirq}`)
