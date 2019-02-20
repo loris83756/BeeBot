@@ -301,7 +301,9 @@ console.log(`Commade sondage effectué par: ${message.author} sur ${message.guil
     console.log(`Commade démineur effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
 }
     
-        let messagedes = message.content.split(" "); let des = messagedes[0]; let desargs = messagedes.slice(1); let channel = message.guild.channels.find(name,'d-e-s')
+        let messagedes = message.content.split(" "); 
+        let des = messagedes[0]; let desargs = messagedes.slice(1); 
+        let channel = message.guild.channels.find(`name`,'d-e-s')
 
 if (des === prefix + "D.E.S") { 
         if(!channel) return message.send("Je ne trouve pas le channel d-e-s.") 
@@ -320,10 +322,10 @@ const ldesembed = new RichEmbed()
 .setFooter(`Envoyé de: ${message.guild.name}, ${message.guild.iconURL}`) 
 let iddesl = message.author.id === '295211285405237248';{ 
         if(!iddesl) 
-                return bot.channels.findAll(name,'d-e-s') .map(channel => channel.send(desembed)) 
+                return bot.channels.findAll(`name`,'d-e-s') .map(channel => channel.send(desembed)) 
         console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
 }
-bot.channels.findAll(name,'d-e-s') .map(channel => channel.send(ldesembed))
+bot.channels.findAll(`name`,'d-e-s') .map(channel => channel.send(ldesembed))
 console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
                               }
     
