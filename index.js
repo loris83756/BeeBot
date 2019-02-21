@@ -20,7 +20,7 @@ bot.on("guildMemberAdd" , member => {
 bot.on('message', message => {
 bot.on("guildMemberRemove" , member => {
     const aqembed = new RichEmbed() 
-            .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n Nous ne sommes après en plus que ${message.guild.memberCount}. \n **...............................................:bee:**`)
+            .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n Nous ne sommes après en plus que ${message.guild.memberCount} \n **...............................................:bee:**`)
             .setImage("https://cdn.discordapp.com/attachments/546798816012009483/546805791395676180/312211545684532865024865468.png")
             .setTimestamp()
             .setThumbnail(member.user.avatarURL)
