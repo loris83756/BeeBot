@@ -8,7 +8,7 @@ var prefix = ("*")
 
 bot.on("guildMemberAdd" , member => {
         const boembed = new RichEmbed() 
-                .addField(`:bee:....................................................`,`\n Bienvenue **${member}** \n sur **${member.guild.name}** \n  **....................................................**:bee:`)
+                .addField(`:bee:....................................................`,`\n Bienvenue **${member}** \n sur **${member.guild.name}** \n  **....................................................**`)
                 .setImage("https://cdn.discordapp.com/attachments/511129543768145930/544509143566909453/4565662.png")
                 .setTimestamp()
                 .setThumbnail(member.user.avatarURL)
@@ -18,7 +18,7 @@ bot.on("guildMemberAdd" , member => {
 
 bot.on("guildMemberRemove" , member => {
     const aqembed = new RichEmbed() 
-            .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n **....................................................**:bee:`)
+            .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n **....................................................**`)
             .setImage("https://cdn.discordapp.com/attachments/546798816012009483/546805791395676180/312211545684532865024865468.png")
             .setTimestamp()
             .setThumbnail(member.user.avatarURL)
