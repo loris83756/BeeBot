@@ -4,11 +4,12 @@ const { Client, RichEmbed } = require('discord.js');
 
 var prefix = ("*")
 
+bot.on('message', message => {
 //BIENVENUE / A QUTTER LE SERVEUR-----------------------------------------------------------------------------------------------
 
 bot.on("guildMemberAdd" , member => {
         const boembed = new RichEmbed() 
-                .addField(`:bee:....................................................`,`\n Bienvenue **${member}** \n sur **${member.guild.name}** \n  **....................................................**`)
+                .addField(`:bee:....................................................`,`\n Bienvenue **${member}** \n sur **${member.guild.name}** \n  **...............................................:bee:**`)
                 .setImage("https://cdn.discordapp.com/attachments/511129543768145930/544509143566909453/4565662.png")
                 .setTimestamp()
                 .setThumbnail(member.user.avatarURL)
@@ -18,7 +19,7 @@ bot.on("guildMemberAdd" , member => {
 
 bot.on("guildMemberRemove" , member => {
     const aqembed = new RichEmbed() 
-            .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n **....................................................**`)
+            .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n Nous ne sommes après en plus que ${message.guild.memberCount}. **...............................................:bee:**`)
             .setImage("https://cdn.discordapp.com/attachments/546798816012009483/546805791395676180/312211545684532865024865468.png")
             .setTimestamp()
             .setThumbnail(member.user.avatarURL)
@@ -38,7 +39,7 @@ bot.user.setActivity(`Prefix: * | ${bot.users.size} users | ${bot.guilds.size} s
     console.log("Connecter");
 });
 //HELP---------------------------------------------------------------------------------------------------------------------------
-bot.on('message', message => {
+
 if (message.content === prefix + "help") {
     const embed = new RichEmbed()
       .setTitle('**......................................................... \n :bee:__Commandes utiles__::bee:** \n **........................................................**')
@@ -110,6 +111,7 @@ let userargs = messageuser.slice(1);
         .addField(" :id: ID:",`${user.id}`)
         .addField(":vertical_traffic_light:Statu:",`  ${user.presence.status} `)
         .addField(":video_game: Joue a:",`  ${user.presence.game ? user.presence.game.name : "Rien"}`)
+            .addField("**:bookmark_tabs: Roles que tu posséde sur ce serveur:**",message.member.roles.map(roles =>`${roles.name}`).join(', '))
         .setColor(0xffa500)
         .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
         .setThumbnail(message.mentions.users.first().avatarURL)
@@ -126,7 +128,6 @@ let userargs = messageuser.slice(1);
     .addField("**:pencil: Crée le:**", message.guild.createdAt)
     .addField("**:grinning: Membres sur le discord:**", message.guild.memberCount)
     .addField("**:door: Tu as rejoin le:**", message.member.joinedAt)
-    .addField("**:bookmark_tabs: Roles que tu posséde sur ce serveur:**",message.member.roles.map(roles =>`${roles.name}`).join(', '))
     .setColor(0xffa500)
     .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
     .setTimestamp()
