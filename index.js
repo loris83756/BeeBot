@@ -4,7 +4,6 @@ const { Client, RichEmbed } = require('discord.js');
 
 var prefix = ("*")
 
-bot.on('message', message => {
 //BIENVENUE / A QUTTER LE SERVEUR-----------------------------------------------------------------------------------------------
 
 bot.on("guildMemberAdd" , member => {
@@ -17,6 +16,7 @@ bot.on("guildMemberAdd" , member => {
                 member.guild.channels.find("name","nouveau-départ").send(boembed);
             })
 
+bot.on('message', message => {
 bot.on("guildMemberRemove" , member => {
     const aqembed = new RichEmbed() 
             .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n Nous ne sommes après en plus que ${message.guild.memberCount}. \n **...............................................:bee:**`)
