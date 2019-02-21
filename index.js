@@ -11,7 +11,7 @@ bot.on("guildMemberAdd" , member => {
                 .addField(`:bee:....................................................`,`\n Bienvenue **${member}** \n sur **${member.guild.name}** \n  **....................................................**:bee:`)
                 .setImage("https://cdn.discordapp.com/attachments/511129543768145930/544509143566909453/4565662.png")
                 .setTimestamp()
-                .setThumbnail(member.avatarURL)
+                .setThumbnail(member.user.avatarURL)
                 .setColor(0xffa500);
                 member.guild.channels.find("name","nouveau-départ").send(boembed);
             })
@@ -21,7 +21,7 @@ bot.on("guildMemberRemove" , member => {
             .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n **....................................................**:bee:`)
             .setImage("https://cdn.discordapp.com/attachments/546798816012009483/546805791395676180/312211545684532865024865468.png")
             .setTimestamp()
-            .setThumbnail(member.avatarURL)
+            .setThumbnail(member.user.avatarURL)
             .setColor(0xffa500);
             member.guild.channels.find("name","nouveau-départ").send(aqembed);
         })
@@ -302,7 +302,8 @@ console.log(`Commade sondage effectué par: ${message.author} sur ${message.guil
 }
     
         let messagedes = message.content.split(" "); 
-        let des = messagedes[0]; let desargs = messagedes.slice(1); 
+        let des = messagedes[0]; 
+        let desargs = messagedes.slice(1); 
         let channel = message.guild.channels.find(`name`,'d-e-s')
 
 if (des === prefix + "D.E.S") { 
