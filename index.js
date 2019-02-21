@@ -171,7 +171,7 @@ console.log(`Commade info serveur effectué par: ${message.author} sur ${message
 }
 //PILE/FACE------------------------------------------------------------------------------------------------------------------------  
    if (message.content === prefix + "pile/face") {
-    var reponse = [":regional_indicator_f: :regional_indicator_a: :regional_indicator_c: :regional_indicator_e:",":regional_indicator_p: :regional_indicator_i: :regional_indicator_l: :regional_indicator_e: "]
+    var reponse = (":regional_indicator_f: :regional_indicator_a: :regional_indicator_c: :regional_indicator_e:",":regional_indicator_p: :regional_indicator_i: :regional_indicator_l: :regional_indicator_e: ")
     var resultat = Math.floor((Math.random() * reponse.length));
     const embed =new RichEmbed()
     .setTitle('**__:moneybag: Pile ou Face ??__**')
@@ -309,7 +309,7 @@ console.log(`Commade sondage effectué par: ${message.author} sur ${message.guil
 if (des === prefix + "D.E.S") { 
         if(!channel) return message.send("Je ne trouve pas le channel d-e-s.") 
         if (!desargs) return message.send("Vous devez écrire un message a envoyé") 
-        let desmessage = desargs.join(" ").slice(0);
+        let desmessage = desargs.join(" ").slice(0);      
 const desembed = new RichEmbed() 
 .addField(`:bee: Utilisateur: **${message.author.username}**`, desmessage) 
 .setThumbnail(message.author.avatarURL) 
@@ -328,7 +328,7 @@ let iddesl = message.author.id === '295211285405237248';{
 }
 bot.channels.findAll(channel => channel.name ==="d-e-s") .map(channel => channel.send(ldesembed))
 console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
-                              }
+     }
     
 //OFF---------------------------------------------------------------------------------------------------------------------------------------
     
