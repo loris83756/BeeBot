@@ -247,7 +247,7 @@ if (kick === prefix + "kick") {
     .addField(":alarm_clock: Sanction effectué le:",message.createdAt)
     .setColor(0xffa500)
     .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
-    message.guild.member(kickUser).ban(kickRaison);
+    message.guild.member(kickUser).kick(kickRaison);
 message.channel.send(embed);
 console.log(`Commade kick effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)   
 }
