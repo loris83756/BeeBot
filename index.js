@@ -16,6 +16,7 @@ bot.on("guildMemberAdd" , member => {
                 member.guild.channels.find("name","nouveau-départ").send(boembed);
             })
 
+
 bot.on('message', message => {
 bot.on("guildMemberRemove" , member => {
     const aqembed = new RichEmbed() 
