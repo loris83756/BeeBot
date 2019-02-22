@@ -334,10 +334,10 @@ console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.
 let role = messagerole[0];
 let roleargs = messagerole.slice(1); 
         if (role === prefix + "role") {
-    let mentionrole = message.guild.member(message.guild.roles.find(`name`,${roleargs}) || message.guild.members.get(roleargs[0]));
+    let mentionrole = message.guild.member(message.guild.roles.find(`name`, roleargs) || message.guild.members.get(roleargs[0]));
     if (!mentionrole) 
     return message.channel.send("**:information_source: Vous devez mentionné le role a ajouter*");
-    let emoji = roleargs.join(" ").slice(22);
+    let emoji = roleargs.join(" ").slice(22);  
     if(!message.member.hasPermission("MANAGE_ROLES")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
     if(mentionrole.hasPermission("MANAGE_ROLES")) 
