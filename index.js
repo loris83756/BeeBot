@@ -330,25 +330,23 @@ bot.channels.findAll(channel => channel.name ==="d-e-s") .map(channel => channel
 console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
      }
         
-    let messagerole = message.content.split(" ");
-let role = messagerole[0];
-let roleargs = messagerole.slice(1); 
-        if (role === prefix + "role") {
-    let mentionrole = message.guild.member(message.guild.roles.find(`name`, roleargs) || message.guild.members.get(roleargs[0]));
-    if (!mentionrole) 
-    return message.channel.send("**:information_source: Vous devez mentionné le role a ajouter*");
-    let emoji = roleargs.join(" ").slice(22);  
-    if(!message.member.hasPermission("MANAGE_ROLES")) 
-    return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
-    if(mentionrole.hasPermission("MANAGE_ROLES")) 
-    return message.channel.send("**:information_source: Vous n'avez pas mit l'emoji a ajouter*");
-    const embed = new RichEmbed()
-    .setTitle(`**Role: ${mentionrole} \n Cliquez sur ${emoji} pour obtenir le role**`)
+
+var messagerole = message.content.split(" ");
+var role = messagerole[0];
+var roleargs = messagerole.slice(1); 
+  if (role === prefix + "role") {
+    let roleadd = miroirargs.join(" ").slice(0); 
+          if(!roleadd)
+       return message.channel.send("**Vous devez écrire le role a ajouter**")
+          let rolename = message.guild.roles.find(`name`, role)
+          if(!rolename)
+       return message.channel.send("**Je ne touve pas se role**")
+    const rembed =new RichEmbed()
+    .addField("Cliquer sur la réaction pour ajouter le role:", `${roleadd}`)
     .setColor(0xffa500)
-    .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
-reaction.message.channel.send(`${emoji}`);
-message.channel.send(embed);
-console.log(`Commade barolen effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)    
+    message.channel.send(rembed)
+    reaction.message.channel.send(`:bee:`);
+    console.log(`Commade role effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
 }
 //OFF---------------------------------------------------------------------------------------------------------------------------------------
     
