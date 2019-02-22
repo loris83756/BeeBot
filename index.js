@@ -335,7 +335,7 @@ var messagerole = message.content.split(" ");
 var role = messagerole[0];
 var roleargs = messagerole.slice(1); 
   if (role === prefix + "role") {
-    let roleadd = miroirargs.join(" ").slice(0); 
+    let roleadd = roleargs.join(" ").slice(22); 
           if(!roleadd)
        return message.channel.send("**Vous devez écrire le role a ajouter**")
           let rolename = message.guild.roles.find(`name`, role)
