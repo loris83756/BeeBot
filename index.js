@@ -330,6 +330,23 @@ bot.channels.findAll(channel => channel.name ==="d-e-s") .map(channel => channel
 console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
      }
     
+        if (role === prefix + "role") {
+    let mentionrole = message.guild.member(message.mentions.role.first() || message.guild.members.get(roleargs[0]));
+    if (!mentionrole) 
+    return message.channel.send("**:information_source: Vous devez mentionné le role a ajouter*");
+    let emoji = roleargs.join(" ").slice(22);
+    if(!message.member.hasPermission("MANAGE_ROLES")) 
+    return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
+    if(mentionrole.hasPermission("MANAGE_ROLES")) 
+    return message.channel.send("**:information_source: Vous n'avez pas mit l'emoji a ajouter*");
+    const embed = new RichEmbed()
+    .setTitle(`**Role: ${mentionrole} \n Cliquez sur ${emoji} pour obtenir le role**`)
+    .setColor(0xffa500)
+    .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
+reaction.message.channel.send(`${emoji}`);
+message.channel.send(embed);
+console.log(`Commade barolen effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)    
+}
 //OFF---------------------------------------------------------------------------------------------------------------------------------------
     
     if (message.content === prefix + "off") {
