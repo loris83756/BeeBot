@@ -16,6 +16,15 @@ bot.on("guildMemberAdd" , member => {
                 member.guild.channels.find("name","nouveau-départ").send(boembed);
             })
 
+bot.on("guildMemberRemove" , member => {
+    const aqembed = new RichEmbed() 
+            .addField(`:bee:....................................................`,`${member} a quitté le serveur. \n Nous ne sommes plus que ${member.guild.memberCount} \n **...............................................:bee:**`)
+            .setImage("https://cdn.discordapp.com/attachments/546798816012009483/546805791395676180/312211545684532865024865468.png")
+            .setTimestamp()
+            .setThumbnail(member.user.avatarURL)
+            .setColor(0xffa500);
+            member.guild.channels.find("name","nouveau-départ").send(aqembed);
+        })
 
 // AUTO ROLE---------------------------------------------------------------------------------------------------------------------
 
