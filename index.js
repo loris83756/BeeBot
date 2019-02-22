@@ -320,7 +320,10 @@ let iddesl = message.author.id === '295211285405237248';{
 bot.channels.findAll(channel => channel.name ==="d-e-s") .map(channel => channel.send(ldesembed))
 console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
      }
-    
+        
+    let messagerole = message.content.split(" ");
+let role = messagerole[0];
+let roleargs = messagerole.slice(1); 
         if (role === prefix + "role") {
     let mentionrole = message.guild.member(message.mentions.role.first() || message.guild.members.get(roleargs[0]));
     if (!mentionrole) 
