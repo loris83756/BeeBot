@@ -330,11 +330,9 @@ bot.channels.findAll(channel => channel.name ==="d-e-s") .map(channel => channel
 console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
      }
         
-
-var messagerole = message.content.split(" ");
-var role = messagerole[0];
-var roleargs = messagerole.slice(1); 
-  if (role === prefix + "role") {
+let messagerole = message.content.split(" ");
+let roleargs = messagerole.slice(1); 
+  if (message.content === prefix + "role") {
     let roleadd = roleargs.join(" ").slice(22); 
           if(!roleadd)
        return message.channel.send("**Vous devez écrire le role a ajouter**")
