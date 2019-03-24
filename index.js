@@ -10,5 +10,5 @@ bot.user.setActivity(`Prefix: * |Status: Maintenance|Fin de maintenace 30 mars`,
     console.log("Connecter");
 })
       
-});
+);
 bot.login(process.env.TOKEN);
