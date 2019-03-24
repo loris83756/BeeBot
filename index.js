@@ -19,5 +19,5 @@ if (message.content === prefix + "help") {
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
 } 
       
-);
+});
 bot.login(process.env.TOKEN);
