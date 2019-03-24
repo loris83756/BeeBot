@@ -13,7 +13,7 @@ bot.user.setActivity(`|Status: Maintenance| Fin de maintenance prevu le 30 mars`
 bot.on('message', message => { 
 if (message.content === prefix + "help") {
     const hembed =new RichEmbed()
-    .setTitle("**:tools:BEEING EST EN MAINTENANCE. FIN DE MAINTENANCE PREVU LE MARS**")
+    .setTitle("**:tools:BEEING EST EN MAINTENANCE, FIN DE MAINTENANCE PREVU LE MARS**")
     .setColor(Math.floor(Math.random() * 16777214) + 1)
     message.channel.send(hembed)
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
