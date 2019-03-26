@@ -22,13 +22,13 @@ if (message.content === prefix + "help") {
       let messagedes = message.content.split(" ");  
       let des = messagedes[0]; 
       let desargs = messagedes.slice(1); 
-      let channel = message.guild.channels.find(channel => channel.name === "d-e-s")
+      let channel = message.guild.channels.find(channel => channel.name === "d-e-stest")
 
 if (des === prefix + "des") { 
       if(!channel) 
-            return message.send("Je ne trouve pas le channel d-e-s.") 
+            return message.channel.send("Je ne trouve pas le channel d-e-s.") 
       if (!desargs) 
-            return message.send("Vous devez écrire un message a envoyé") 
+            return message.channel.send("Vous devez écrire un message a envoyé") 
       let desmessage = desargs.join(" ").slice(0)
 const desembed = new RichEmbed() 
 .addField(`:bee: Utilisateur: **${message.author.username}**`, desmessage) 
@@ -44,10 +44,10 @@ const ldesembed = new RichEmbed()
 .setFooter(`Envoyé de: ${message.guild.name}`, `${message.guild.iconURL}`) 
 let iddesl = message.author.id === '295211285405237248';{ 
       if(!iddesl) 
-            return bot.channels.findAll(channel => channel.name === "d-e-s") .map(channel => channel.send(desembed)) 
+            return bot.channels.findAll(channel => channel.name === "d-e-stest") .map(channel => channel.send(desembed)) 
       console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
 }
-bot.channels.findAll(channel => channel.name === "d-e-s") .map(channel => channel.send(ldesembed))
+bot.channels.findAll(channel => channel.name === "d-e-stest") .map(channel => channel.send(ldesembed))
 console.log(`Commade D.E.S effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
 }
       
