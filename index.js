@@ -24,7 +24,7 @@ if (message.content === prefix + "help") {
       let desargs = messagedes.slice(1); 
       let channel = message.guild.channels.find(`name`,'d-e-stest')
 
-if (des === prefix + `desmessage`) { 
+if (des === prefix + `${messagedes}`) { 
       if(!channel) 
             return message.send("Je ne trouve pas le channel d--s.") 
       if (!desargs) 
