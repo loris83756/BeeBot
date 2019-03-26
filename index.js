@@ -6,7 +6,7 @@ var prefix = ("*")
       
       
 bot.on('ready',function() {
-bot.user.setActivity(`|Status: Maintenance| Fin de maintenance prevu le 30 mars`, { type: `STREAMING`, url: 'https://www.twitch.tv/loris83756'})
+bot.user.setActivity(`|Status: Maintenance| Fin de maintenance prevu le 30 mars`, { type: `STREAMING`, url: 'https://www.twitch.tv/beeingbot'})
     console.log("Connecter");
 })
 
