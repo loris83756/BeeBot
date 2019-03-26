@@ -24,7 +24,7 @@ if (message.content === prefix + "help") {
       let desargs = messagedes.slice(1); 
       let channel = message.guild.channels.find(`name`,'d-e-stest')
 
-if (des) { 
+if (des === prefix + `desmessage`) { 
       if(!channel) 
             return message.send("Je ne trouve pas le channel d--s.") 
       if (!desargs) 
@@ -32,12 +32,15 @@ if (des) {
       let desmessage = desargs.join(" ").slice(0)
 const desembed = new RichEmbed() 
 .addField(`:bee: Utilisateur: **${message.author.username}**`, desmessage) 
-.setThumbnail(message.author.avatarURL) .setColor(0xffa500) 
-.setTimestamp() .setFooter(`Envoyé de: ${message.guild.name}`, `${message.guild.iconURL}`) 
+.setThumbnail(message.author.avatarURL) 
+.setColor(0xffa500) 
+.setTimestamp() 
+.setFooter(`Envoyé de: ${message.guild.name}`, `${message.guild.iconURL}`) 
 const ldesembed = new RichEmbed()
 .addField(`:crown: Owner: **${message.author.username}**`, desmessage) 
 .setThumbnail(message.author.avatarURL) 
-.setColor(0xff0000) .setTimestamp() 
+.setColor(0xff0000) 
+.setTimestamp() 
 .setFooter(`Envoyé de: ${message.guild.name}`, `${message.guild.iconURL}`) 
 let iddesl = message.author.id === '295211285405237248';{ 
       if(!iddesl) 
