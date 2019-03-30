@@ -1,5 +1,4 @@
 
-@@ -1,364 +1 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js');
