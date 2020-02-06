@@ -154,6 +154,7 @@ if (message.content === prefix + "shop") {
     const embed = new RichEmbed()
     .setThumbnail("https://api.nitestats.com/v1/shop/image")
     .addField("https://api.nitestats.com/v1/shop/image")
+    message.channel.send(embed)
 console.log(`Commade info serveur effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
 }
 //TOKEN-----------------------------------------------------------------------------------------------------------------------------
