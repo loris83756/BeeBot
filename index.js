@@ -62,13 +62,9 @@ if (message.content === prefix + "help") {
                 .setTitle(':information_source: **Informations:**')
                 .addField(`:satellite: Serveurs:`, `${bot.guilds.size}`)
                 .addField(`:grinning: Users`, `${bot.users.size}`)
-                .addField(`:vs: Version:`, `Bêta 1.0.0`)
                 .addField(`:computer: Developpeur`, `loris83756#6865`)
                 .addField(`:pencil: Codage utilisé:`, `Node JS 11.4.2`)
                 .addField(`:regional_indicator_h: Hébergeur:`, `Heroku`, true)
-                .addField(`:ok_hand: Server Support:`, `[Cliquer ici](https://discord.gg/JXz8YTR)`) 
-                .addField(`:bee: Inviter Beeing:`, `[Cliquer ici](https://discordapp.com/oauth2/authorize?client_id=515518385686183937&permissions=8&scope=bot)`) 
-                .setTimestamp()
                 .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
                 .setColor(0x008000);
             message.channel.send(embed);
@@ -222,6 +218,22 @@ console.log(`Commade kick effectué par: ${message.author} sur ${message.guild.n
     
 //CLEAR----------------------------------------------------------------------------------------------------------------------------
 
+   let messageclear = message.content.split(" ");
+let clear = messageclear[0];
+let clearargs = messageclear.slice(1); 
+  
+if (clear === prefix + "clear") {
+    if (!clearargs[0]) 
+return message.channel.send("**:information_source: Vous devez indiquer le nombre de message a supprimer.**");
+  if(!message.member.hasPermission("MANAGE_MESSAGE")) 
+    return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
+     if(isNaN(clearargs[0]))
+return message.channel.send("**:information_source: Tu doit indiquer le nombre de message a supprimer**")
+message.channel.bulkDelete(clearargs[0]).then(() => {
+    message.channel.send(`${clearargs[0]} messages ont était suprimer.`).then(msg => msg.delete(2000));
+     console.log(`Commade clear effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
+})
+} 
 
 //OFF---------------------------------------------------------------------------------------------------------------------------------------
     
