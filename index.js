@@ -57,7 +57,7 @@ if (message.content === prefix + "help") {
       .setTitle('Les commandes vous ont été envoyés en MP :mailbox_with_mail:')
       .setColor(0x008000)
       .setTimestamp()
-      .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
+      .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
      message.channel.send(embed)
     console.log(`Commade help (message MP) effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)   
     }
@@ -74,7 +74,7 @@ if (message.content === prefix + "help") {
                 .addField(`:ok_hand: Server Support:`, `[Cliquer ici](https://discord.gg/JXz8YTR)`) 
                 .addField(`:bee: Inviter Beeing:`, `[Cliquer ici](https://discordapp.com/oauth2/authorize?client_id=515518385686183937&permissions=8&scope=bot)`) 
                 .setTimestamp()
-                .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
+                .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
                 .setColor(0x008000);
             message.channel.send(embed);
          console.log(`Commade info bot effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
@@ -95,7 +95,7 @@ let userargs = messageuser.slice(1);
         .addField(":vertical_traffic_light:Statu:",`  ${user.presence.status} `)
         .addField(":video_game: Joue a:",`  ${user.presence.game ? user.presence.game.name : "Rien"}`)
         .setColor(0x008000)
-        .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
+        .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
         .setThumbnail(message.mentions.users.first().avatarURL)
         .setTimestamp()
         message.guild.member(user)
@@ -112,7 +112,7 @@ let userargs = messageuser.slice(1);
     .addField("**:door: Tu as rejoin le:**", message.member.joinedAt)
     .addField("**:bookmark_tabs: Roles que tu posséde sur ce serveur:**",message.member.roles.map(roles =>`${roles.name}`).join(', '))
     .setColor(0x008000)
-    .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
+    .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
     .setTimestamp()
 message.channel.sendEmbed(embed)
 console.log(`Commade info serveur effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
@@ -122,7 +122,7 @@ console.log(`Commade info serveur effectué par: ${message.author} sur ${message
     const embed = new RichEmbed()
                 .setTitle(`:ping_pong: Pong: ${bot.ping} ms`)
                 .setColor(0x008000)
-                .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
+                .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
                 .setTimestamp()
      message.channel.send(embed);
      console.log(`Commade ping effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
@@ -193,7 +193,7 @@ if (ban === prefix + "ban") {
     .addField(":scroll: Raison de la sanction:",banRaison)
     .addField(":alarm_clock: Sanction effectué le:",message.createdAt)
     .setColor(0x008000)
-    .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
+    .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
     message.guild.member(banUser).ban(banRaison);
 message.channel.send(embed);
 console.log(`Commade ban effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)    
@@ -219,7 +219,7 @@ if (kick === prefix + "kick") {
     .addField(":scroll: Raison de la sanction:",kickRaison)
     .addField(":alarm_clock: Sanction effectué le:",message.createdAt)
     .setColor(0x008000)
-    .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
+    .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
     message.guild.member(kickUser).ban(kickRaison);
 message.channel.send(embed);
 console.log(`Commade kick effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)   
