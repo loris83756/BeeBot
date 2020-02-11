@@ -170,7 +170,7 @@ let miroirargs = messagemiroir.slice(1);
 //BAN----------------------------------------------------------------------------------------------------------------------     
 let messageban = message.content.split(" ");
 let ban = messageban[0];
-let banargs = messageban.slice(1); 
+let banargs = messageban.slice(0); 
   
 if (ban === prefix + "ban") {
     let banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(banargs[0]));
@@ -196,7 +196,7 @@ console.log(`Commade ban effectué par: ${message.author} sur ${message.guild.na
  //KICK---------------------------------------------------------------------------------------------------------------------   
 let messagekick = message.content.split(" ");
 let kick = messagekick[0];
-let kickargs = messagekick.slice(1); 
+let kickargs = messagekick.slice(0); 
   
 if (kick === prefix + "kick") {
     let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(kickargs[0]));
@@ -227,7 +227,7 @@ let clearargs = messageclear.slice(1);
 if (clear === prefix + "clear") {
     if (!clearargs[0]) 
 return message.channel.send("**:information_source: Vous devez indiquer le nombre de message a supprimer.**");
-  if(!message.GuildMember.hasPermission("MANAGE_MESSAGE")) 
+  if(!message.member.hasPermission("MANAGE_MESSAGE")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
      if(isNaN(clearargs[0]))
 return message.channel.send("**:information_source: Tu doit indiquer le nombre de message a supprimer**")
