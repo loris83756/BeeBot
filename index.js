@@ -4,17 +4,13 @@ const { Client, RichEmbed } = require('discord.js');
 
 var prefix = ("/")
 //BIENVENUE / A QUTTER LE SERVEUR-----------------------------------------------------------------------------------------------
-bot.on("guildMemberAdd" , member => {
-    member.guild.channels.find("name","👋nouveaux-départs").send(`**Bienvenue** ${member}`)
-})
-
 bot.on("guildMemberRemove" , member => {
     member.guild.channels.find("name","👋nouveaux-départs").send(`**${member} a quitté le serveur **`)
 })
 // AUTO ROLE---------------------------------------------------------------------------------------------------------------------
 
 bot.on(`guildMemberAdd`,member => {
-    var role = member.guild.roles.find(`name`, `membre`);
+    var role = member.guild.roles.find(`name`, `corona`);
     member.addRole(role)
 })
 //SET GAME-----------------------------------------------------------------------------------------------------------------------
