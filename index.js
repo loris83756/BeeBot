@@ -19,7 +19,7 @@ bot.on(`guildMemberAdd`,member => {
 })
 //SET GAME-----------------------------------------------------------------------------------------------------------------------
 bot.on('ready',function() {
-bot.user.setActivity(`à manger des cornichon`, { type: `PLAYING`})
+bot.user.setActivity(`manger des cornichon`, { type: `PLAYING`})
     console.log("Connecter");
 });
 //HELP---------------------------------------------------------------------------------------------------------------------------
