@@ -170,7 +170,7 @@ let miroirargs = messagemiroir.slice(1);
 //BAN----------------------------------------------------------------------------------------------------------------------     
 let messageban = message.content.split(" ");
 let ban = messageban[0];
-let banargs = messageban.slice(0); 
+let banargs = messageban.slice(1); 
   
 if (ban === prefix + "ban") {
     let banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(banargs[0]));
@@ -196,7 +196,7 @@ console.log(`Commade ban effectué par: ${message.author} sur ${message.guild.na
  //KICK---------------------------------------------------------------------------------------------------------------------   
 let messagekick = message.content.split(" ");
 let kick = messagekick[0];
-let kickargs = messagekick.slice(0); 
+let kickargs = messagekick.slice(1); 
   
 if (kick === prefix + "kick") {
     let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(kickargs[0]));
