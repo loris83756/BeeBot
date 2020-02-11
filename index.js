@@ -221,18 +221,7 @@ console.log(`Commade kick effectué par: ${message.author} sur ${message.guild.n
 }
     
 //CLEAR----------------------------------------------------------------------------------------------------------------------------
-let messageclear = message.content.split(" ");
-let clear = messageclear[0];
-let clearargs = messageclear.slice(1); 
-  
-if (clear === prefix + "clear") {
-    if (!clearargs[0]) 
-return message.channel.send("**MAINTENANCE**");
-  if(!message.member.hasPermission("MANAGE_MESSAGE")) 
-    return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
-     if(isNaN(clearargs[0]))
-return message.channel.send("**MAINTENANCE**")
-}
+
 
 //OFF---------------------------------------------------------------------------------------------------------------------------------------
     
