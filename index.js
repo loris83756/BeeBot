@@ -5,21 +5,21 @@ const { Client, RichEmbed } = require('discord.js');
 var prefix = ("*")
 //BIENVENUE / A QUTTER LE SERVEUR-----------------------------------------------------------------------------------------------
 bot.on("guildMemberAdd" , member => {
-    member.guild.channels.find("name","nouveau-départ").send(`**Bienvenue** ${member}`)
+    member.guild.channels.find("name","🌋😎général😎🌋").send(`**Bienvenue** ${member}`)
 })
 
 bot.on("guildMemberRemove" , member => {
-    member.guild.channels.find("name","nouveau-départ").send(`**${member} a quitté le serveur **`)
+    member.guild.channels.find("name","🌋😎général😎🌋").send(`**${member} a quitté le serveur **`)
 })
 // AUTO ROLE---------------------------------------------------------------------------------------------------------------------
 
 bot.on(`guildMemberAdd`,member => {
-    var role = member.guild.roles.find(`name`, `Membres`);
+    var role = member.guild.roles.find(`name`, `membre`);
     member.addRole(role)
 })
 //SET GAME-----------------------------------------------------------------------------------------------------------------------
 bot.on('ready',function() {
-bot.user.setActivity(`Prefix: * | ${bot.users.size} users | ${bot.guilds.size} serveurs |`, { type: `STREAMING`, url: 'https://www.twitch.tv/loris83756'})
+bot.user.setActivity(`Vive Kuhn!! `, { type: `PLAYING`})
     console.log("Connecter");
 });
 //HELP---------------------------------------------------------------------------------------------------------------------------
@@ -30,7 +30,6 @@ if (message.content === prefix + "help") {
       .addField(`*info-bot`,`:small_orange_diamond:Donne des informations sur le bot.`)
       .addField(`*info-user + [user]`,`:small_orange_diamond:Donne des informations sur l'utilisateur mentioner. `)
       .addField(`*info-serveur`,`:small_orange_diamond:Donne des informations sur le serveur ou est effectué cette commande. `)
-      .addField(`*serveurs`,`:small_orange_diamond:Donne la liste de tous les serveurs et du nombre de membres ou se trouve Beeing#4440.`)
       .addField(`*clear + [nombre]`,`:small_orange_diamond:Permet de supprimer le nombre de message indiquer (max 100). `)
       .addField(`*ping`,`:small_orange_diamond:Donne le temps de réaction du bot en ms.`)
       .addField(`**......................................................... \n :hammer:__Commandes modérations__::hammer:**`,` \n **.........................................................** `)
@@ -46,9 +45,9 @@ if (message.content === prefix + "help") {
       .addField(`Bonjour`,`:small_orange_diamond:Dites Bonjour et le Bot vous répondra.`)
       .addField(`Bienvenue/a quitté le serveur`,`:small_orange_diamond: Dès qu une personne rejoindra votre serveur le Bot lui souhaitera la Bienvenue et à son départ le Bot dira @...#0000 a quitté le serveur. \n :exclamation:Attention il faut posséder un salon nouveau-départ pour pouvoir avoir accès à cette fonctionnalité.:exclamation:`)
       .addField(`Auto rôle Membres `,`:small_orange_diamond:Ajoute automatiquement le rôle Membres a tout les nouveaux de votre serveur. \n :exclamation: Attention il faut posséder le rôle Membres.:exclamation:`)
-      .setColor(0xffa500)
+      .setColor(0x008000)
       .setTimestamp()
-      .setFooter("Beeing","https://cdn.discordapp.com/atta`chments/511129543768145930/531464974548205568/Beeing.jpg")
+      .setFooter("Kuhn","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
     message.author.send(embed);
     console.log(`Commade help effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
   }
@@ -56,9 +55,9 @@ if (message.content === prefix + "help") {
     if (message.content === prefix + "help") {
      const embed = new RichEmbed()
       .setTitle('Les commandes vous ont été envoyés en MP :mailbox_with_mail:')
-      .setColor(0xffa500)
+      .setColor(0x008000)
       .setTimestamp()
-      .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
+      .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
      message.channel.send(embed)
     console.log(`Commade help (message MP) effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)   
     }
@@ -69,14 +68,14 @@ if (message.content === prefix + "help") {
                 .addField(`:satellite: Serveurs:`, `${bot.guilds.size}`)
                 .addField(`:grinning: Users`, `${bot.users.size}`)
                 .addField(`:vs: Version:`, `Bêta 1.0.0`)
-                .addField(`:computer: Developpeur`, `loris83756#0001`)
+                .addField(`:computer: Developpeur`, `loris83756#6865`)
                 .addField(`:pencil: Codage utilisé:`, `Node JS 11.4.2`)
                 .addField(`:regional_indicator_h: Hébergeur:`, `Heroku`, true)
                 .addField(`:ok_hand: Server Support:`, `[Cliquer ici](https://discord.gg/JXz8YTR)`) 
                 .addField(`:bee: Inviter Beeing:`, `[Cliquer ici](https://discordapp.com/oauth2/authorize?client_id=515518385686183937&permissions=8&scope=bot)`) 
                 .setTimestamp()
-                .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
-                .setColor(0xffa500);
+                .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
+                .setColor(0x008000);
             message.channel.send(embed);
          console.log(`Commade info bot effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
     }
@@ -95,8 +94,8 @@ let userargs = messageuser.slice(1);
         .addField(" :id: ID:",`${user.id}`)
         .addField(":vertical_traffic_light:Statu:",`  ${user.presence.status} `)
         .addField(":video_game: Joue a:",`  ${user.presence.game ? user.presence.game.name : "Rien"}`)
-        .setColor(0xffa500)
-        .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
+        .setColor(0x008000)
+        .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
         .setThumbnail(message.mentions.users.first().avatarURL)
         .setTimestamp()
         message.guild.member(user)
@@ -112,28 +111,18 @@ let userargs = messageuser.slice(1);
     .addField("**:grinning: Membres sur le discord:**", message.guild.memberCount)
     .addField("**:door: Tu as rejoin le:**", message.member.joinedAt)
     .addField("**:bookmark_tabs: Roles que tu posséde sur ce serveur:**",message.member.roles.map(roles =>`${roles.name}`).join(', '))
-    .setColor(0xffa500)
-    .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
+    .setColor(0x008000)
+    .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
     .setTimestamp()
 message.channel.sendEmbed(embed)
 console.log(`Commade info serveur effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
-}
-//SERVEURS-------------------------------------------------------------------------------------------------------------------------    
-     if (message.content === prefix + "serveurs") {
-         const embed = new RichEmbed()
-        .setTitle(bot.guilds.map(r => r.name + ` |**${r.memberCount}** membres \n -------------`))
-        .setTimestamp()
-        .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
-        .setColor(0xffa500);
-         message.channel.send(embed)
-         console.log(`Commade serveurs effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
-    }
+}   
 //PING-----------------------------------------------------------------------------------------------------------------------------
   if (message.content === prefix + "ping") {
     const embed = new RichEmbed()
                 .setTitle(`:ping_pong: Pong: ${bot.ping} ms`)
-                .setColor(0xffa500)
-                .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
+                .setColor(0x008000)
+                .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
                 .setTimestamp()
      message.channel.send(embed);
      console.log(`Commade ping effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
@@ -150,7 +139,7 @@ console.log(`Commade info serveur effectué par: ${message.author} sur ${message
     const embed =new RichEmbed()
     .setTitle('**__:game_die: Dé__**')
     .addField("Tu es tombé sur le :",reponse[resultat])
-    .setColor(0xffa500)
+    .setColor(0x008000)
     message.channel.send(embed)
     console.log(`Commade dé effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
 }
@@ -162,7 +151,7 @@ console.log(`Commade info serveur effectué par: ${message.author} sur ${message
     .setTitle('**__:moneybag: Pile ou Face ??__**')
     .addField("Tu es tombé sur:",reponse[resultat])
     .setThumbnail("https://www.gifimage.net/wp-content/uploads/2018/11/pile-ou-face-gif-1.gif")
-    .setColor(0xffa500)
+    .setColor(0x008000)
     message.channel.send(embed)
     console.log(`Commade pile/face effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
 } 
@@ -178,7 +167,7 @@ let miroirargs = messagemiroir.slice(1);
     .setTitle("**__:crystal_ball: Miroir Magique__**")
     .addField("Question", `${miroirargs}`)
     .addField("Réponse:",reponse[resultat])
-    .setColor(0xffa500)
+    .setColor(0x008000)
     .setThumbnail("http://ekladata.com/JftiL-mR0hOfxXe8OFrYHdu9vPk.gif")
     message.channel.send(embed)
     console.log(`Commade miroir effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`) 
@@ -203,8 +192,8 @@ if (ban === prefix + "ban") {
     .addField(":cop: Utilisateur banni par:",`${message.author}`)
     .addField(":scroll: Raison de la sanction:",banRaison)
     .addField(":alarm_clock: Sanction effectué le:",message.createdAt)
-    .setColor(0xffa500)
-    .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
+    .setColor(0x008000)
+    .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
     message.guild.member(banUser).ban(banRaison);
 message.channel.send(embed);
 console.log(`Commade ban effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)    
@@ -229,8 +218,8 @@ if (kick === prefix + "kick") {
     .addField(":cop: Utilisateur expulser par:",`${message.author}`)
     .addField(":scroll: Raison de la sanction:",kickRaison)
     .addField(":alarm_clock: Sanction effectué le:",message.createdAt)
-    .setColor(0xffa500)
-    .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
+    .setColor(0x008000)
+    .setFooter("Beeing","https://media-exp1.licdn.com/dms/image/C4D0BAQGn43BBbfTAsQ/company-logo_200_200/0?e=2159024400&v=beta&t=nGsM3rCwox38NfgjaETacRlgAFYsKIiX05AVCWg4jwE")
     message.guild.member(kickUser).ban(kickRaison);
 message.channel.send(embed);
 console.log(`Commade kick effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)   
@@ -252,40 +241,7 @@ message.channel.bulkDelete(clearargs[0]).then(() => {
      console.log(`Commade clear effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
 })
 }
-//COMMANDE EN TEST--------------------------------------------------------------------------------------------------------------------------
- let messagesondage = message.content.split(" ");
-let sondage = messagesondage[0];
-let sondageargs = messagesondage.slice(1); 
-  
-if (sondage === prefix + "sondage") {
-    if (!sondageargs[1]) 
-    return message.channel.send("**:information_source: Vous devez posez une question.**");
-    let sondagequestion = sondageargs.join(" ").slice(22);
-    if(!message.member.hasPermission("KICK_MEMBERS")) 
-    return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
-    const embed = new RichEmbed()
-    .setTitle("**Sondage.**")
-    .addField(":wave: Question poser par:",`${message.author}`)
-    .addField("Question:",`${sondagequestion}`)
-    .addField("Question poser le:",message.createdAt)
-    .setColor(0xffa500)
-    .setFooter("Beeing","https://cdn.discordapp.com/attachments/511129543768145930/531464974548205568/Beeing.jpg")
-    message.guild.member(sondagequestion);
-message.channel.send(embed);
-console.log(`Commade sondage effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)   
-}
-    
-    
-    if (message.content === prefix + "démineur") {
-    const embed =new RichEmbed()
-    .setTitle('**Démineur**')
-    .addField("||:bomb:|| ||:one:|| ||:two:|| ||:one:|| ||:bomb:|| \n||:one:|| ||:one:|| ||:one:|| ||:bomb:|| ||:one:|| \n||:two:|| ||:two:|| ||:one:|| ||:bomb:|| ||:one:|| \n||:three:|| ||:two:|| ||:one:|| ||:one:|| ||:one:||", "Ne tombez pas sur l'une des bombes (4 :bomb:)")
-    .setColor(0xffa500)
-    message.channel.send(embed)
-    console.log(`Commade démineur effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
-}
-    
-    
+
 //OFF---------------------------------------------------------------------------------------------------------------------------------------
     
     if (message.content === prefix + "off") {
