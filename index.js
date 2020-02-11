@@ -227,7 +227,7 @@ let clearargs = messageclear.slice(1);
 if (clear === prefix + "clear") {
     if (!clearargs[0]) 
 return message.channel.send("**:information_source: Vous devez indiquer le nombre de message a supprimer.**");
-  if(!message.member.hasPermission("MANAGE_MESSAGE")) 
+  if(!message.GuildMember.hasPermission("MANAGE_MESSAGE")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
      if(isNaN(clearargs[0]))
 return message.channel.send("**:information_source: Tu doit indiquer le nombre de message a supprimer**")
