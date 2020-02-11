@@ -176,7 +176,7 @@ if (ban === prefix + "ban") {
     let banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(banargs[0]));
     if (!banUser) 
     return message.channel.send("**:information_source: Vous devez mentionné l'utilisateur a bannir et la raison de la sanction.**");
-    let banRaison = banargs.join(" ").slice(22);
+    let banRaison = banargs.join(" ").slice(33);
     if(!message.member.hasPermission("BAN_MEMBERS")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
     if(banUser.hasPermission("BAN_MEMBERS")) 
@@ -202,7 +202,7 @@ if (kick === prefix + "kick") {
     let kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(kickargs[0]));
     if (!kickUser) 
     return message.channel.send("**:information_source: Vous devez mentionné l'utilisateur a expulser et la raison de la sanction.**");
-    let kickRaison = kickargs.join(" ").slice(22);
+    let kickRaison = kickargs.join(" ").slice(33);
     if(!message.member.hasPermission("KICK_MEMBERS")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
     if(kickUser.hasPermission("KICK_MEMBERS")) 
@@ -225,14 +225,14 @@ let clear = messageclear[0];
 let clearargs = messageclear.slice(1); 
   
 if (clear === prefix + "clear") {
-    if (!clearargs[1]) 
+    if (!clearargs[0]) 
 return message.channel.send("**:information_source: Vous devez indiquer le nombre de message a supprimer.**");
   if(!message.member.hasPermission("MANAGE_MESSAGE")) 
     return message.channel.send("**:x:Vous n'avez pas la permissin de faire ceci.**");
-     if(isNaN(clearargs[1]))
+     if(isNaN(clearargs[0]))
 return message.channel.send("**:information_source: Tu doit indiquer le nombre de message a supprimer**")
-message.channel.bulkDelete(clearargs[1]).then(() => {
-    message.channel.send(`${clearargs[1]} messages ont était suprimer.`).then(msg => msg.delete(2000));
+message.channel.bulkDelete(clearargs[0]).then(() => {
+    message.channel.send(`${clearargs[0]} messages ont était suprimer.`).then(msg => msg.delete(2000));
      console.log(`Commade clear effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
 })
 }
