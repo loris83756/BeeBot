@@ -26,7 +26,7 @@ bot.user.setActivity(`manger des cornichon`, { type: `PLAYING`})
 bot.on('message', message => {
 if (message.content === prefix + "help") {
     const embed = new RichEmbed()
-      .setTitle('**......................................................... \n :bee:__Commandes utiles__::bee:** \n **........................................................**')
+      .setTitle('**......................................................... \n :cucumber:__Commandes utiles__:cucumber:** \n **........................................................**')
       .addField(`*info-bot`,`:small_orange_diamond:Donne des informations sur le bot.`)
       .addField(`*info-user + [user]`,`:small_orange_diamond:Donne des informations sur l'utilisateur mentioner. `)
       .addField(`*info-serveur`,`:small_orange_diamond:Donne des informations sur le serveur ou est effectué cette commande. `)
@@ -40,7 +40,6 @@ if (message.content === prefix + "help") {
       .addField(`*dé`,`:small_orange_diamond:Tire un nombre de 1 a 6.`)
       .addField(`*pile/face`,`:small_orange_diamond:Tire pile ou face.`)
       .addField(`*miroir + [question] (debug en cours)`,`:small_orange_diamond:Répond a la question que vous posez.`)
-      .addField(`*démineur (alpha test 1 niveau)`,`Ne tomber pas sur l'une des bombes!`)
       .addField(`**......................................................... \n :tv:__Autres fonctionalitées:__:tv:**`,` \n **.........................................................**`)
       .addField(`Bonjour`,`:small_orange_diamond:Dites Bonjour et le Bot vous répondra.`)
       .addField(`Bienvenue/a quitté le serveur`,`:small_orange_diamond: Dès qu une personne rejoindra votre serveur le Bot lui souhaitera la Bienvenue et à son départ le Bot dira @...#0000 a quitté le serveur. \n :exclamation:Attention il faut posséder un salon nouveau-départ pour pouvoir avoir accès à cette fonctionnalité.:exclamation:`)
