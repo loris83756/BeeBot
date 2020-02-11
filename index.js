@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js');
 
-var prefix = ("*")
+var prefix = ("/")
 //BIENVENUE / A QUTTER LE SERVEUR-----------------------------------------------------------------------------------------------
 bot.on("guildMemberAdd" , member => {
     member.guild.channels.find("name","🌋😎général😎🌋").send(`**Bienvenue** ${member}`)
