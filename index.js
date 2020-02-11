@@ -182,7 +182,7 @@ return message.channel.send("**:information_source: Vous devez indiquer le nombr
      if(isNaN(clearargs[0]))
 return message.channel.send("**:information_source: Tu doit indiquer le nombre de message a supprimer**")
 message.channel.bulkDelete(clearargs[0]).then(() => {
-    message.channel.send(`${clearargs[0]} messages ont était suprimer.`).then(msg => msg.delete(2000));
+    message.channel.send(`${clearargs[0]} messages ont était suprimer.`).then(msg => msg.delete(30000));
      console.log(`Commade clear effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
 })
 }
