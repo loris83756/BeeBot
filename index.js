@@ -119,10 +119,7 @@ console.log(`Commade info serveur effectué par: ${message.author} sur ${message
      console.log(`Commade ping effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)  
     }
 //BONJOUR----------------------------------------------------------------------------------------------------------------------------    
-    if (message.content === "Bonjour"){
-        message.reply("Bonjour.");
-        console.log(`Commade bonjour effectué par: ${message.author} sur ${message.guild.name} a ${message.createdAt}`)
-    }
+   
  //Dé------------------------------------------------------------------------------------------------------------------------------   
     if (message.content === prefix + "dé") {
     var reponse = [":one:",":two:",":three:",":four:",":five:",":six:"]
