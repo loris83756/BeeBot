@@ -32,7 +32,7 @@ if (message.content === prefix + "help") {
       .addField(`*ban + [utilisateur] + [raison de la sanction]`,`:green_circle: Permet de bannir des utilisateurs.`)
       .addField(`*kick + [utilisateur] + [raison de la sanction]`,`: green_circle:Permet d´expulser des utilisateurs.`)
       .addField(`*mute (**Bientot disponible**)`,`:tools: Permet de rendre muet des utilisateurs.`)
-      .addField(`**......................................................... \n :video_game:__Commandes jeu:__:video_game:**`,` \n **.........................................................**`)
+      .setTitle(`**......................................................... \n :video_game:__Commandes jeu:__:video_game:**`,` \n **.........................................................**`)
       .addField(`*dé`,`:green_circle: Tire un nombre de 1 a 6.`)
       .addField(`*pile/face`,`:green_circle: Tire pile ou face.`)
       .addField(`*miroir + [question]`,`:green_circle: Répond a la question que vous posez.`)
