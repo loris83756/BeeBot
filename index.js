@@ -22,7 +22,7 @@ bot.user.setActivity(`manger des cornichon`, { type: `PLAYING`})
 bot.on('message', message => {
 if (message.content === prefix + "help") {
     const embed = new RichEmbed()
-      .addField('**......................................................... \n :cucumber:__Commandes utiles__:cucumber:**`,` \n **........................................................**')
+      .addField('**......................................................... \n :cucumber:__Commandes utiles__:cucumber:**',' \n **........................................................**')
       .addField(`*info-bot`,`:green_circle: Donne des informations sur le bot.`)
       .addField(`*info-user + [user]`,`:green_circle: Donne des informations sur l'utilisateur mentioner. `)
       .addField(`*info-serveur`,`:green_circle: Donne des informations sur le serveur ou est effectué cette commande. `)
