@@ -10,7 +10,7 @@ bot.on("guildMemberRemove" , member => {
 // AUTO ROLE---------------------------------------------------------------------------------------------------------------------
 
 bot.on(`guildMemberAdd`,member => {
-    var role = member.guild.roles.find(`name`, `🥒menbre🥒`);
+    var role = member.guild.roles.find(`name`, `🥒membre🥒`);
     member.addRole(role)
 })
 //SET GAME-----------------------------------------------------------------------------------------------------------------------
